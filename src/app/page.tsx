@@ -1,9 +1,19 @@
-import Image from "next/image";
+import { Description } from "app/components/home/Description";
 
+import { Hero } from "app/components/home/Hero";
+import { MainProducts } from "app/components/home/MainProducts";
+
+Description
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1>hola mundo</h1>
-    </div>
+    <main>
+
+      <Hero />
+
+      <Description />
+
+      <MainProducts />
+
+    </main>
   );
 }

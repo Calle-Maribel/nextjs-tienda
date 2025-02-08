@@ -1,9 +1,9 @@
-"use client"
 
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "app/components/Header";
-import "./globals.css";
+
+import { Header } from "app/components/Shared/Header";
+
+import { Footer } from "app/components/Shared/Footer";
 
 
 const geistSans = Geist({
@@ -27,11 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en">
-      <Header />
+  
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         
+        <Header />
+
         {children}
+
+        <Footer />
 
       </body>
     </html>
